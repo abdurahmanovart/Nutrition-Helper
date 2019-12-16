@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="ai.arturxdroid.nutritionhelper.ui.home_ask.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_plan_diet"
+        android:name="ai.arturxdroid.nutritionhelper.ui.plan_diet.PlanDietFragment"
+        android:label="@string/menu_plan_diet"
+        tools:layout="@layout/fragment_plan_diet" />
+
+    <fragment
+        android:id="@+id/nav_get_random_receipt"
+        android:name="ai.arturxdroid.nutritionhelper.ui.get_random_receipt.RandomReceiptFragment"
+        android:label="@string/menu_random_receipt"
+        tools:layout="@layout/fragment_random_receipt" />
+
+    <fragment
+        android:id="@+id/nav_food_videos"
+        android:name="ai.arturxdroid.nutritionhelper.ui.food_videos.FoodVideosFragment"
+        android:label="@string/menu_food_videos"
+        tools:layout="@layout/fragment_food_videos" />
+
+    <fragment
+        android:id="@+id/nav_convert_amounts"
+        android:name="ai.arturxdroid.nutritionhelper.ui.convert_amounts.ConvertAmountsFragment"
+        android:label="@string/menu_convert_amounts"
+        tools:layout="@layout/fragment_convert" />
+
+    <fragment
+        android:id="@+id/nav_search_recipe"
+        android:name="ai.arturxdroid.nutritionhelper.ui.search_recipe.SearchReceiptFragment"
+        android:label="@string/menu_search_receipt"
+        tools:layout="@layout/fragment_search_receipt" />
+
+    <fragment
+        android:id="@+id/nav_calorie_counter"
+        android:name="ai.arturxdroid.nutritionhelper.ui.calories_counter.CaloriesCounterFragment"
+        android:label="@string/menu_calorie_counter"
+        tools:layout="@layout/fragment_calories" />
+
+</navigation>

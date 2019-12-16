@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Nutrition Helper</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_plan_diet">Plan diet</string>
+    <string name="menu_search_receipt">Search Receipt</string>
+    <string name="menu_convert_amounts">Convert Amounts</string>
+    <string name="menu_random_receipt">Random Receipt</string>
+    <string name="menu_food_videos">Food Videos</string>
+    <string name="menu_calorie_counter">Calorie Counter</string>
+</resources>
