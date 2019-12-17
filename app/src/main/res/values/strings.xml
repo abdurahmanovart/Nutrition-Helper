@@ -14,4 +14,7 @@
     <string name="menu_random_receipt">Random Receipt</string>
     <string name="menu_food_videos">Food Videos</string>
     <string name="menu_calorie_counter">Calorie Counter</string>
+    <string name="ask_hint">\"How many calories are in an apple?\"</string>
+    <string name="enter_question">Ask some question</string>
+    <string name="ask_button_text">Get answer</string>
 </resources>
