@@ -24,16 +24,20 @@ class HomeFragment : Fragment() {
     ): View? {
         homeViewModel =
             ViewModelProviders.of(this).get(HomeViewModel::class.java)
+
         val root = inflater.inflate(R.layout.fragment_home, container, false)
         val answerTextView: TextView = root.findViewById(R.id.answer_text_view)
         val queryTextView: TextView = root.findViewById(R.id.ask_question_edit_text)
+
         homeViewModel.text.observe(this, Observer {
             answerTextView.text = it
         })
+
         homeViewModel.imageUrl.observe(this, Observer {
             Picasso.get().load(it).into(answer_image_view)
             answer_image_view.visibility = View.VISIBLE
         })
+
         val button = root.findViewById<MaterialButton>(R.id.ask_question_button)
 
         button.setOnClickListener {

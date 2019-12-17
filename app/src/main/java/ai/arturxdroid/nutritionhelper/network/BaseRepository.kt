@@ -3,7 +3,6 @@ package ai.arturxdroid.nutritionhelper.network
 import android.util.Log
 import retrofit2.Response
 import java.io.IOException
-import java.lang.Exception
 
 open class BaseRepository {
 
@@ -36,7 +35,7 @@ open class BaseRepository {
     }
 }
 
-sealed class Result<out T:Any> {
-    data class Success<out T:Any>(val data: T):Result<T>()
-    data class Error(val exception: Exception):Result<Nothing>()
+sealed class Result<out T : Any> {
+    data class Success<out T : Any>(val data: T) : Result<T>()
+    data class Error(val exception: Exception) : Result<Nothing>()
 }
