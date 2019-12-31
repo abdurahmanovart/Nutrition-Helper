@@ -8,6 +8,10 @@
             name="homeViewModel"
             type="ai.arturxdroid.nutritionhelper.ui.home_ask.HomeViewModel" />
 
+        <variable
+            name="homeFragment"
+            type="ai.arturxdroid.nutritionhelper.ui.home_ask.HomeFragment" />
+
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -31,6 +35,7 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/textInputLayout"
+            android:padding="8dp"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -59,6 +64,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="19dp"
+            android:onClick="@{()->homeViewModel.fetchAnswer(homeFragment.answerEditText.text.toString())}"
             android:text="@string/ask_button_text"
             android:textAlignment="center"
             android:textSize="14sp"
@@ -93,6 +99,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
+            android:padding="8dp"
             android:text="@{homeViewModel.text}"
             android:textAlignment="center"
             app:layout_constraintEnd_toEndOf="parent"

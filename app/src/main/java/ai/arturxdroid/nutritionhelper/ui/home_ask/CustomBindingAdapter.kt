@@ -1,4 +1,4 @@
-package ai.arturxdroid.nutritionhelper
+package ai.arturxdroid.nutritionhelper.ui.home_ask
 
 import android.widget.ImageView
 import androidx.databinding.BindingAdapter
