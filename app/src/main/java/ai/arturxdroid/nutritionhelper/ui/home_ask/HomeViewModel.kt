@@ -19,13 +19,13 @@ class HomeViewModel : ViewModel() {
 
     val text: LiveData<String> = _text
     val imageUrl: LiveData<String> = _imageUrl
-    private val answerResponse:LiveData<AnswerResponse> = _answerResponse
+    private val answerResponse: LiveData<AnswerResponse> = _answerResponse
 
     fun fetchAnswer(query: String) {
         viewModelScope.launch {
             _answerResponse.value = repository.getQuickAnswer(query)
             _text.value = answerResponse.value?.answer
-            if(answerResponse.value?.image?.startsWith("http") == true)
+            if (answerResponse.value?.image?.startsWith("http") == true)
                 _imageUrl.value = answerResponse.value?.image
         }
     }

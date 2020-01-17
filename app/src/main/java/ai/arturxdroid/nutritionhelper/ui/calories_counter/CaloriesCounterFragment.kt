@@ -1,7 +1,6 @@
 package ai.arturxdroid.nutritionhelper.ui.calories_counter
 
 import ai.arturxdroid.nutritionhelper.R
-import ai.arturxdroid.nutritionhelper.ui.convert_amounts.ConvertAmountsViewModel
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -11,7 +10,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 
-public class CaloriesCounterFragment:Fragment(){
+public class CaloriesCounterFragment : Fragment() {
 
     private lateinit var caloriesCounterViewModel: CaloriesCounterViewModel
 

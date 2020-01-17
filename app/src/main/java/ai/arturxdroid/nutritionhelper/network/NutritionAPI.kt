@@ -1,6 +1,7 @@
 package ai.arturxdroid.nutritionhelper.network
 
-import ai.arturxdroid.nutritionhelper.data.*
+import ai.arturxdroid.nutritionhelper.data.AnswerResponse
+import ai.arturxdroid.nutritionhelper.data.SearchRecipeResponse
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Header
@@ -17,13 +18,13 @@ interface NutritionAPI {
 
     @GET("recipes/search")
     suspend fun searchRecipes(
-    @Header("x-rapidapi-host") host: String,
-    @Header("x-rapidapi-key") key: String,
-    @Query("query") query: String,
-    @Query("cuisine") cuisine: String?,
-    @Query("diet") diet: String,
-    @Query("excludeIngredients") excludeIngridients: String?,
-    @Query("intolerances") intolerances: String?,
-    @Query("number") number:Int = 100
+        @Header("x-rapidapi-host") host: String,
+        @Header("x-rapidapi-key") key: String,
+        @Query("query") query: String,
+        @Query("cuisine") cuisine: String?,
+        @Query("diet") diet: String,
+        @Query("excludeIngredients") excludeIngridients: String?,
+        @Query("intolerances") intolerances: String?,
+        @Query("number") number: Int = 100
     ): Response<SearchRecipeResponse>
 }
