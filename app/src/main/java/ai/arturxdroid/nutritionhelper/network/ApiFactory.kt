@@ -12,8 +12,6 @@ object ApiFactory {
     private val authInterceptor = Interceptor { chain ->
         val newUrl = chain.request().url()
             .newBuilder()
-            //.addQueryParameter("x-rapidapi-key",Constants.API_KEY)
-            //.addQueryParameter("x-rapidapi-host", "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com")
             .build()
 
         val newRequest = chain.request()
@@ -32,7 +30,6 @@ object ApiFactory {
     fun retrofit(): Retrofit = Retrofit.Builder()
         .client(client)
         .baseUrl(BASE_URL)
-//        .addConverterFactory(retrofit2.converter.moshi.MoshiConverterFactory.create())
         .addConverterFactory(GsonConverterFactory.create())
         .build()
 
