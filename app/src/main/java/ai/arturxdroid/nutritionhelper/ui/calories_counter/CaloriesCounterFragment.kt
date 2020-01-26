@@ -7,23 +7,21 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProviders
 
 public class CaloriesCounterFragment : Fragment() {
 
-    private lateinit var caloriesCounterViewModel: CaloriesCounterViewModel
+    private val caloriesCounterViewModel: CaloriesCounterViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        caloriesCounterViewModel =
-            ViewModelProviders.of(this).get(CaloriesCounterViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_calories, container, false)
         val textView: TextView = root.findViewById(R.id.text_calories)
-        caloriesCounterViewModel.text.observe(this, Observer {
+        caloriesCounterViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
         })
         return root

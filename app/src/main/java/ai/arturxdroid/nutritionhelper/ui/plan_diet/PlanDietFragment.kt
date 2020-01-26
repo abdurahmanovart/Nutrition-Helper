@@ -7,23 +7,21 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProviders
 
 class PlanDietFragment : Fragment() {
 
-    private lateinit var planDietViewModel: PlanDietViewModel
+    private val planDietViewModel: PlanDietViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        planDietViewModel =
-            ViewModelProviders.of(this).get(PlanDietViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_plan_diet, container, false)
         val textView: TextView = root.findViewById(R.id.text_gallery)
-        planDietViewModel.text.observe(this, Observer {
+        planDietViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
         })
         return root

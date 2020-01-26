@@ -8,12 +8,12 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.EditText
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProviders
+import androidx.fragment.app.viewModels
 import com.google.android.material.bottomsheet.BottomSheetDialog
 
 class HomeFragment : Fragment() {
 
-    private lateinit var homeViewModel: HomeViewModel
+    private val homeViewModel: HomeViewModel by viewModels()
 
     lateinit var answerEditText: EditText
 
@@ -24,9 +24,6 @@ class HomeFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        homeViewModel =
-            ViewModelProviders.of(this).get(HomeViewModel::class.java)
-
         val rootBind = AnswerBinding.inflate(inflater, container, false)
         answerEditText = rootBind.root.findViewById(R.id.ask_question_edit_text)
 
